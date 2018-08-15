@@ -9,6 +9,6 @@ intName = input("Please enter the desired interface: ")
 ePackets = Ether(src=RandMAC(), destMac="ff:ff:ff:ff:ff:ff")
 aPackets = ARP(packetDest="10.10.10.10",hardwareDest="ff:ff:ff:ff:ff:ff")
 try:
-    sendp(ePackets/aPackets, iface=intname,count=noOfPackets,inter=.001)
+    sendp(ePackets/aPackets, iface=intName,count=noOfPackets,inter=.001)
 except:
     print("Destination Unreachable")
